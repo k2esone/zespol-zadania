@@ -24,10 +24,6 @@ public class Zespol {
     private String nazwa;
     private String odpowiedzialnosc;
 
-    @OneToMany(mappedBy = "zespol")
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private Set<Zadanie> zadania;
 
     @OneToMany(mappedBy = "zespol")
     @ToString.Exclude

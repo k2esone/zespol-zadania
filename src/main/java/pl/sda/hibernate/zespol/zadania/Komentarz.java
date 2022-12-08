@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Komenatarz {
+public class Komentarz {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,6 +1,6 @@
 package pl.sda.hibernate.zespol;
 
-import pl.sda.hibernate.zespol.Komendy.Komenda;
+import pl.sda.hibernate.zespol.Komendy.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +10,20 @@ public class Main {
 
         List<Komenda> listKomend = new ArrayList<>(
                 List.of(
+                        new KomendaDodajZespol(),
+                        new KomendaDodajCzlonekZespolu(),
+                        new KomendaDodajZadanie(),
+                        new KomendaDodajKomentarz(),
+                        new KomendaListaZespol(),
+                        new KomendaListaCzlonekZespolu(),
+                        new KomendaListaZadanie(),
+                        new KomendaListaKomentarz(),
+                        new KomendaUsunZespol(),
+                        new KomendaUsunCzlonekZespolu(),
+                        new KomendaUsunZadanie(),
+                        new KomendaUsunKomentarz()
 
-
-                )
+                        )
         );
 
         String komenda;

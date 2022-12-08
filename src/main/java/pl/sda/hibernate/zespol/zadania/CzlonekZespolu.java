@@ -23,6 +23,8 @@ public class CzlonekZespolu {
 
     private String imie;
     private String nazwisko;
+
+    @Enumerated(value = EnumType.STRING)
     private CzyJestCzlonkiem czyJestCzlonkiem;
 
     @ManyToOne
@@ -33,6 +35,11 @@ public class CzlonekZespolu {
     @OneToMany(mappedBy = "czlonekZespolu")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private Set<Komenatarz> Komentarze;
+    private Set<Komentarz> komentarze;
+
+    @OneToMany(mappedBy = "czlonekZespolu")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Set<Zadanie> zadania;
 
 }

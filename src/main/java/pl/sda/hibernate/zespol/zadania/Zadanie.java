@@ -23,16 +23,19 @@ public class Zadanie {
 
     private String tytul;
     private String opis;
+
+    @Enumerated(value = EnumType.STRING)
     private Priorytet priorytet;
 
-    @ManyToOne
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private Zespol zespol;
 
     @OneToMany(mappedBy = "zadanie")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private Set<Komenatarz> komentarze;
+    private Set<Komentarz> komentarze;
+
+    @ManyToOne
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private CzlonekZespolu czlonekZespolu;
 
 }
